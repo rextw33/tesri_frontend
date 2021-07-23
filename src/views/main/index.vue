@@ -1,5 +1,4 @@
 <template>
-  <Indexer />
   <Introduction />
   <News />
   <Announcement />
@@ -10,7 +9,6 @@
 </template>
 
 <script>
-import Indexer from "@/views/main/Indexer.vue";
 import Introduction from "@/views/main/Introduction.vue";
 import News from "@/views/main/News.vue";
 import Announcement from "@/views/main/Announcement.vue";
@@ -20,9 +18,8 @@ import Policies from "@/views/main/Policies.vue";
 import Contacts from "@/views/main/Contacts.vue";
 
 export default {
-  name: "Home",
+  name: "Main",
   components: {
-    Indexer,
     Introduction,
     News,
     Announcement,

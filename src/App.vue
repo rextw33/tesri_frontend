@@ -1,11 +1,42 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="nav" class="flex justify-between">
+    <div>
+      <router-link to="/">特有生物研究保育中心植物標本館 (TAIE)</router-link>
+    </div>
+    <div class="flex">
+      <div class="px-5">
+        <a
+          href="https://test-tesri.microtekweb.com/"
+          target="_blank"
+          alt="前台管理"
+        >
+          <BriefcaseIcon class="h-6 w-6" aria-hidden="true" />
+        </a>
+      </div>
+      <div class="px-5">
+        <router-link to="/profile">
+          <UserCircleIcon class="h-6 w-6" aria-hidden="true" />
+        </router-link>
+      </div>
+    </div>
   </div>
-  <router-view/>
+  <router-view />
+  <Footer />
 </template>
 
+<script>
+import { UserCircleIcon, BriefcaseIcon } from "@heroicons/vue/outline";
+import Footer from "@/components/Footer.vue";
+
+export default {
+  name: "App",
+  components: {
+    UserCircleIcon,
+    BriefcaseIcon,
+    Footer,
+  },
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
